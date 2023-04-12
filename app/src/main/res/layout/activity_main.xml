@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/Charcoal"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/mainToolBar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/diffYellow"
+    app:titleTextColor="@color/Charcoal"
+
+    app:layout_constraintTop_toTopOf="parent"
+
+    />
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorMargin="10dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="3dp"
+        app:sliderIndicatorSelectedColor="#FF9800"
+        app:sliderIndicatorUnselectedColor="#CCCCCC"
+        app:sliderScrollTimeInSec="3"
+        app:sliderStartAutoCycle="true"
+        app:sliderAutoCycleDirection="right"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/startframe"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+
+        android:background="@drawable/rectangular_ripple_background"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSlider">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="START"
+            android:textColor="@color/diffYellow"
+            android:textSize="24sp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flBMI"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangular_ripple_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startframe">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BMI CALCULATOR"
+            android:textColor="@color/diffYellow"
+            android:textSize="24dp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flHistory"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangular_ripple_background"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flBMI">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="History"
+            android:textColor="@color/diffYellow"
+            android:textSize="24dp" />
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
